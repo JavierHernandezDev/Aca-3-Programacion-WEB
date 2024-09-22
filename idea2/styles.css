@@ -1,0 +1,215 @@
+/* Importación de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+}
+
+/* Estilos del encabezado y navegación */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.navbar .logo h1 {
+    color: #ff5722;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff5722;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 100px 10% 50px 10%;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+/* Estilos específicos para cada sección */
+#inicio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inicio .texto {
+    flex: 1 1 500px;
+    padding-right: 20px;
+}
+
+#inicio .texto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#inicio .texto p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+#inicio .imagen {
+    flex: 1 1 500px;
+}
+
+#inicio .imagen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e64a19;
+}
+
+/* Estilos para la sección de productos */
+#productos h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+.producto-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.producto:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto h3 {
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.producto p {
+    padding: 0 20px 20px 20px;
+    color: #555;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e64a19;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar ul li {
+        margin-left: 20px;
+    }
+
+    #inicio {
+        flex-direction: column;
+    }
+
+    #inicio .texto {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    #inicio .texto h2 {
+        font-size: 2em;
+    }
+}
